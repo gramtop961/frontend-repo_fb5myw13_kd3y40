@@ -7,6 +7,10 @@ const Hero = () => {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const whatsappHref = `https://wa.me/393793205801?text=${encodeURIComponent(
+    'Ciao Emozione Arredo, vorrei un preventivo e un sopralluogo gratuito.'
+  )}`;
+
   return (
     <section className="relative min-h-[90vh] w-full overflow-hidden bg-black text-white">
       <div className="absolute inset-0">
@@ -21,13 +25,12 @@ const Hero = () => {
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-28 sm:py-36">
         <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
-          Mobili • Infissi • Ristrutturazioni
+          Emozione Arredo • Mobili • Infissi • Ristrutturazioni
         </span>
         <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-          Design d’interni e ristrutturazioni di livello, su misura per te
+          Arredi su misura e ristrutturazioni chiavi in mano
         </h1>
         <p className="max-w-2xl text-white/80">
-          Arrediamo e rinnoviamo i tuoi spazi con soluzioni moderne e artigianali. 
           Arredatore gratuito a domicilio per rilievo misure e progetto. Sopralluogo gratuito per infissi e ristrutturazioni.
         </p>
         <div className="flex flex-wrap gap-3">
@@ -35,13 +38,21 @@ const Hero = () => {
             onClick={() => handleScrollTo('preventivi')}
             className="rounded-md bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
           >
-            Calcola preventivo cucina
+            Richiedi preventivo
           </button>
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-md border border-white/30 bg-transparent px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-white hover:bg-white/10"
+          >
+            Scrivici su WhatsApp
+          </a>
           <button
             onClick={() => handleScrollTo('contatti')}
             className="rounded-md border border-white/30 bg-transparent px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-white hover:bg-white/10"
           >
-            Contattaci
+            Contatti
           </button>
         </div>
       </div>
